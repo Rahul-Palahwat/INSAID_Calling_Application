@@ -18,16 +18,6 @@ app.use(cors());
 app.use(express.json());
 
 
-// end points for requests
-//Available routes
-// ab yha pr apun log end points ko routes folder se lenge 
-
-
-// ACf197c1b9ae56d44df4a5e9ab40a9cb1d
-
-// e17801a20ec075851fe09d02ae978058
-
-// +13854626493
 
 app.post('/',async (req, res) => {
     try {
@@ -47,6 +37,8 @@ app.post('/',async (req, res) => {
       var account = process.env.User_Account;
       var token = process.env.User_Token;
       var no = process.env.User_No;
+
+      // +13854626493
 
       var client = require('twilio')(account,token);
       client.calls.create({
